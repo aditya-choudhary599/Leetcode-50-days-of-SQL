@@ -1,0 +1,7 @@
+-- # Question Link : https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/description/
+
+select EmployeeUNI.unique_id,Employees.name 
+from Employees
+left join EmployeeUNI
+on Employees.id=EmployeeUNI.id;
+
