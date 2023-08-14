@@ -1,0 +1,41 @@
+String Manipulation Functions in MySQL
+
+CONCAT(str1, str2, ...): Concatenates two or more strings together.
+Example:
+SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM employees;
+
+SUBSTRING(str, start, length): Extracts a substring from a string.
+Example:
+SELECT SUBSTRING(product_name, 1, 10) AS short_name FROM products;
+
+UPPER(str): Converts a string to uppercase.
+Example:
+SELECT UPPER(last_name) AS last_name_upper FROM employees;
+
+LOWER(str): Converts a string to lowercase.
+Example:
+SELECT LOWER(email) AS email_lower FROM customers;
+
+LENGTH(str): Returns the length of a string.
+Example:
+SELECT LENGTH(description) AS desc_length FROM products;
+
+TRIM([BOTH | LEADING | TRAILING] trim_str FROM str): Removes specified characters from the beginning, end, or both sides of a string.
+Example:
+SELECT TRIM(' ' FROM product_name) AS trimmed_name FROM products;
+
+REPLACE(str, search_str, replace_str): Replaces occurrences of a substring within a string.
+Example:
+SELECT REPLACE(address, 'Street', 'St.') AS modified_address FROM customers;
+
+CONCAT_WS(separator, str1, str2, ...): Concatenates strings with a specified separator.
+Example:
+SELECT CONCAT_WS(', ', city, state, country) AS location FROM addresses;
+
+LEFT(str, length): Returns a specified number of characters from the beginning of a string.
+Example:
+SELECT LEFT(phone_number, 3) AS area_code FROM customers;
+
+RIGHT(str, length): Returns a specified number of characters from the end of a string.
+Example:
+SELECT RIGHT(zip_code, 5) AS last_five_digits FROM addresses;
